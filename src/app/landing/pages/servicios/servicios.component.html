@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<!-- Contenido de la página Servicios -->
+<main class="">
+
+  <!-- Hero -->
+  <section 
+    class="relative h-[70vh] flex items-center justify-center text-center text-white 
+           bg-[url('assets/images/hero-quienes-somos.jpg')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-black/50"></div> <!-- Overlay para contraste -->
+    <div class="relative z-10 max-w-3xl px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Servicios</h1>
+      <p class="text-lg md:text-xl text-white/90">
+        En <span class="text-accent font-semibold">Soluciones Pa'to</span> ofrecemos una amplia gama de servicios de carpintería, melamina y drywall.
+      </p>
+    </div>
+  </section>
+
+  <!-- Servicios principales -->
+  <section class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold text-text-brand mb-12">Lo que hacemos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Servicio 1 -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-bg-brand">
+        <div class="flex flex-col items-center mb-4">
+          <h3 class="text-xl font-semibold text-text-accent">Carpintería</h3>
+        </div>
+        <p class="text-text-secondary">Fabricación de muebles a medida con acabados de primera, adaptados a tus espacios y necesidades.</p>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-text-accent">
+        <div class="flex flex-col items-center mb-4">
+          <h3 class="text-xl font-semibold text-text-accent">Melamina</h3>
+        </div>
+        <p class="text-text-secondary">Diseño e instalación de muebles en melamina, combinando estética, durabilidad y funcionalidad.</p>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-yellow-500">
+        <div class="flex flex-col items-center mb-4">
+          <h3 class="text-xl font-semibold text-text-accent">Drywall</h3>
+        </div>
+        <p class="text-text-secondary">Construcción y remodelación con sistemas de drywall para ambientes modernos y funcionales.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Cotización -->
+  <app-cta></app-cta>
+
+</main>
+
+<app-footer></app-footer>

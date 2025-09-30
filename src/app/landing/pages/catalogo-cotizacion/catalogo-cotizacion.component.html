@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div class="relative h-[30vh] flex items-center justify-center text-center text-white bg-bg-brand w-full"> 
+  <h2 class="text-3xl font-bold text-white mb-10 text-center">Catálogo</h2>
+</div>
+<main class="bg-gray-50 min-h-screen">
+  <!-- Catálogo -->
+  <section *ngIf="!productoSeleccionado">    
+    <div class="container mx-auto grid md:grid-cols-4 gap-8 px-2 py-8 transition duration-500 ease-in-out">                         
+      <div *ngFor="let p of productos"
+           class="bg-white rounded-2xl shadow-md hover:shadow-lg transition flex flex-col justify-between p-4 h-[420px]">
+        <div>
+          <img [src]="'http://localhost:1218/uploads/productos/' + p.imagen" [alt]="p.nombre" 
+               class="w-full h-48 object-cover rounded-xl mb-4 border border-blue-100 transition-transform duration-300 hover:scale-105" draggable="false">
+          <h3 class="text-2xl font-bold text-text-brand leading-tight mb-2 truncate">{{ p.nombre }}</h3>
+          <p class="text-gray-600 text-base mb-3 text-center line-clamp-2">{{ p.descripcion }}</p>
+        </div>
+        <div>
+          <p class="font-bold text-text-brand text-lg mb-4">Precio estimado: {{ p.precio }}</p>
+          <button (click)="verDetalle(p)"
+                  class="bg-bg-accent text-white w-full px-4 py-2 rounded-xl hover:bg-bg-accentHover transition font-semibold">
+            Ver detalle
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detalle y formulario -->
+  <section *ngIf="productoSeleccionado" class="container mx-auto max-w-xl px-4 pt-8 pb-16">
+    <div class="bg-white shadow-lg rounded-2xl p-8 ">
+      <img [src]="'http://localhost:1218/uploads/productos/' + productoSeleccionado.imagen" [alt]="productoSeleccionado.nombre"
+           class="w-full h-80 object-cover rounded-xl mb-4 border border-blue-100">
+      <h2 class="text-2xl font-bold text-text-brand mb-2">{{ productoSeleccionado.nombre }}</h2>
+      <p class="text-gray-700 mb-4">{{ productoSeleccionado.descripcion }}</p>
+      <p class="font-bold text-text-brand text-lg mb-6">{{ productoSeleccionado.precio }}</p>
+      <div class="flex flex-col md:flex-row gap-4 mb-6">
+        <button (click)="cotizar()"
+                class="flex-1 bg-text-brand text-white py-3 rounded-xl hover:bg-bg-brand transition">
+          Cotizar
+        </button>
+        <button (click)="productoSeleccionado = null"
+                class="flex-1 bg-gray-100 text-text-brand py-3 rounded-xl hover:bg-gray-200 transition border border-blue-100">
+          ← Volver al catálogo
+        </button>
+      </div>
+
+      <!-- Formulario -->
+      <form *ngIf="mostrarFormulario" (ngSubmit)="enviarWhatsApp()" class="space-y-4 mt-4">
+        <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Tu nombre"
+               class="w-full border border-blue-200 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-800" required>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Tu correo"
+               class="w-full border border-blue-200 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-800" required>
+        <input type="tel" [(ngModel)]="telefono" name="telefono" placeholder="Tu teléfono"
+               class="w-full border border-blue-200 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-800" required>
+        <textarea [(ngModel)]="mensaje" name="mensaje" rows="3" placeholder="Mensaje adicional"
+                  class="w-full border border-blue-200 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-800"></textarea>
+        <button type="submit"
+                class="w-full bg-text-brand text-white py-3 rounded-xl hover:bg-bg-brand transition font-semibold">
+          Enviar por WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

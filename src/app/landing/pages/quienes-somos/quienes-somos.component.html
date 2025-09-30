@@ -1,0 +1,126 @@
+<app-navbar></app-navbar>
+
+<!-- Contenido de la página Quiénes somos -->
+<main class=""> <!-- pt-24 compensa el navbar fijo -->
+
+  <!-- Hero / Encabezado -->
+  <section 
+    class="relative h-[70vh] flex items-center justify-center text-center text-white 
+           bg-[url('assets/images/hero-quienes-somos.jpg')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-black/50"></div> <!-- Overlay para contraste -->
+    <div class="relative z-10 max-w-3xl px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Quiénes Somos</h1>
+      <p class="text-lg md:text-xl text-white/90">
+        En <span class="text-accent font-semibold">Soluciones Pa'to</span> convertimos tus ideas en proyectos de carpintería, melamina y drywall.
+      </p>
+    </div>
+  </section>
+
+  <!-- Nuestra historia -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Texto -->
+    <div>
+        <span class="bg-accent-100 text-text-accent text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4 tracking-wide">
+        Sobre Nosotros
+        </span>
+        <h2 class="text-4xl font-bold text-text-brand mb-6">
+        Nuestra Historia
+        </h2>
+        <p class="text-text-secondary leading-relaxed text-lg">
+        En <span class="font-semibold text-text-accent">Soluciones Pa'to</span>, llevamos más de una década
+        transformando ideas en realidades. Hemos trabajado en <strong>hogares</strong>, <strong>oficinas</strong> 
+        y <strong>negocios</strong>, ofreciendo soluciones personalizadas que combinan 
+        <span class="text-text-brand font-medium">diseño, funcionalidad y durabilidad</span>.
+        </p>
+        <p class="text-text-secondary leading-relaxed mt-6 text-lg">
+        Nuestro compromiso es brindar un servicio cercano y profesional, siempre enfocado en 
+        <span class="text-text-accent font-semibold">superar las expectativas</span> de cada cliente.
+        </p>
+    </div>
+
+    <!-- Imagen -->
+    <div class="relative">
+        <img src="assets/images/quienes-somos.png" alt="Nuestro equipo trabajando"
+            class="rounded-2xl shadow-xl w-full object-cover">
+        <!-- Overlay decorativo -->
+        <div class="absolute -top-6 -left-6 w-24 h-24 bg-bg-brand/20 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl"></div>
+    </div>
+    </section>
+
+
+  <!-- Misión y Visión -->
+    <section class="bg-gray-50 py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+
+        <!-- Misión -->
+        <div class="bg-white rounded-2xl shadow-lg p-10 hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-bg-brand">
+        <div class="flex items-center mb-4">
+            <span class="bg-bg-brand text-white p-3 rounded-full mr-3">
+            <i class="fas fa-flag text-xl"></i> <!-- Ícono misión -->
+            </span>
+            <h2 class="text-2xl font-bold text-text-brand">Nuestra Misión</h2>
+        </div>
+        <p class="text-text-secondary leading-relaxed">
+            Brindar soluciones integrales en carpintería, melamina y drywall que mejoren la vida de nuestros clientes,
+            garantizando <span class="font-semibold text-text-accent">calidad</span>, <span class="font-semibold text-text-accent">confianza</span> y 
+            <span class="font-semibold text-text-accent">cumplimiento</span> en cada proyecto.
+        </p>
+        </div>
+
+        <!-- Visión -->
+        <div class="bg-white rounded-2xl shadow-lg p-10 hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-text-accent">
+        <div class="flex items-center mb-4">
+            <span class="bg-text-accent text-white p-3 rounded-full mr-3">
+            <i class="fas fa-eye text-xl"></i> <!-- Ícono visión -->
+            </span>
+            <h2 class="text-2xl font-bold text-text-brand">Nuestra Visión</h2>
+        </div>
+        <p class="text-text-secondary leading-relaxed">
+            Ser una empresa líder en el sector, reconocida por nuestra <span class="font-semibold text-text-accent">innovación</span>, 
+            <span class="font-semibold text-text-accent">profesionalismo</span> y compromiso con el desarrollo de espacios funcionales y estéticos en toda la región.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+
+  <!-- Valores -->
+    <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-text-brand mb-12">Nuestros Valores</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Calidad -->
+        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-bg-brand">
+            <div class="flex flex-col items-center mb-4">
+            <h3 class="text-xl font-semibold text-text-accent">Calidad</h3>
+            </div>
+            <p class="text-text-secondary">Materiales y acabados de primera en cada proyecto.</p>
+        </div>
+
+        <!-- Confianza -->
+        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-text-accent">
+            <div class="flex flex-col items-center mb-4">
+            <h3 class="text-xl font-semibold text-text-accent">Confianza</h3>
+            </div>
+            <p class="text-text-secondary">Transparencia y compromiso en cada paso del proceso.</p>
+        </div>
+
+        <!-- Puntualidad -->
+        <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 border-t-4 border-yellow-500">
+            <div class="flex flex-col items-center mb-4">
+            <h3 class="text-xl font-semibold text-text-accent">Puntualidad</h3>
+            </div>
+            <p class="text-text-secondary">Cumplimos siempre con los plazos acordados.</p>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+</main>
+
+<app-footer></app-footer>
